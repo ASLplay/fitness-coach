@@ -1,0 +1,36 @@
+.trainingProgram .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.trainingProgram .content .gridProgram {
+  display: grid;
+  grid-template: repeat(2, 200px)/repeat(3, 1fr);
+  gap: 20px;
+}
+.trainingProgram .content .gridProgram .link {
+  cursor: pointer;
+  background-color: var(--whiteGrey);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.trainingProgram .content .gridProgram .link .title {
+  font: var(--title);
+}
+.trainingProgram .content .gridProgram .link img {
+  align-self: flex-end;
+}
+.trainingProgram .content .gridProgram .link:last-child {
+  background-color: var(--orange) !important;
+}
+.trainingProgram .content .gridProgram .link:last-child .title {
+  color: var(--totalWhite);
+  font: var(--title);
+}
+.trainingProgram .content .gridProgram .link:last-child img {
+  filter: brightness(100);
+  align-self: flex-end;
+}/*# sourceMappingURL=trainingProgram.css.map */

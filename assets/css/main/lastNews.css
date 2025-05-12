@@ -1,0 +1,29 @@
+.lastNews .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.lastNews .newsBlock {
+  height: 420px;
+  background-color: var(--black);
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.lastNews .newsBlock .name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lastNews .newsBlock .name .title {
+  font: var(--h1);
+  color: var(--totalWhite);
+}
+.lastNews .newsBlock .name p {
+  color: var(--totalWhite);
+}
+.lastNews .newsBlock a {
+  align-self: flex-end;
+}/*# sourceMappingURL=lastNews.css.map */

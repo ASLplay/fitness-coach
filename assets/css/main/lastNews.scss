@@ -1,0 +1,32 @@
+.lastNews {
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .newsBlock {
+        height: 420px;
+        background-color: var(--black);
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .name {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .title {
+                font: var(--h1);
+                color: var(--totalWhite);
+            }
+            p {
+                color: var(--totalWhite);
+            }
+        }
+
+        a {
+            align-self: flex-end;
+        }
+    }
+}

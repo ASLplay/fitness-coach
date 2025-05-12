@@ -1,0 +1,41 @@
+header {
+  width: 100%;
+}
+header .content {
+  width: 100%;
+  max-width: 1440px;
+  padding: 15px 20px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .content .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .content .logo .img {
+  width: 40px;
+  height: 34px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+header .content .logo .name {
+  color: var(--orange);
+  font: var(--textBold);
+}
+header .content nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .content nav a:last-child {
+  display: flex;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: var(--orange);
+  color: var(--totalWhite);
+}/*# sourceMappingURL=header.css.map */

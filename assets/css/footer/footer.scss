@@ -1,0 +1,53 @@
+footer {
+    width: 100%;
+    background-color: var(--whiteGrey);
+    .content {
+        width: 100%;
+        max-width: 1440px;
+        padding: 40px 20px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .img {
+                width: 40px;
+                height: 34px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .name {
+                color: var(--orange);
+                font: var(--textBold);
+            }
+        }
+
+        nav {
+            align-self: flex-end;
+            display: grid;
+            grid-template: repeat(1, auto) / repeat(3, 217px);
+            gap: 20px;
+            .navBlock {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .title {
+                   font: var(--textBold); 
+                }
+                .links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        }
+
+
+    }
+}
