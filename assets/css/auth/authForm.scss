@@ -1,0 +1,34 @@
+.authForm {
+    width: 100%;
+    max-width: 454px;
+    margin: auto;
+
+    .content {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        h1 {
+            width: 100%;
+            color: var(--orange);
+            display: flex;
+
+            span {
+                margin: auto;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                color: var(--orange);
+            }
+        }
+    }
+}

@@ -24,7 +24,6 @@ header .content .logo .img {
      object-position: center;
 }
 header .content .logo .name {
-  color: var(--orange);
   font: var(--textBold);
 }
 header .content nav {

@@ -2,8 +2,8 @@
 
     <header>
         <div class="content">
-            <a href="/" class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="34" viewBox="0 0 40 34" fill="none"
+            <a href="/" class="logo" title="Вернуться на главную">
+                <svg title="logo" xmlns="http://www.w3.org/2000/svg" width="40" height="34" viewBox="0 0 40 34" fill="none"
                     class="img">
                     <path
                         d="M20.8365 18.4648C26.8695 16.9356 40 34 40 34C40 34 28.4411 23.9021 22.3067 24.3552C16.1724 24.8083 17.1512 32.8314 12.4208 33.4174C7.69034 34.0034 0 23.7726 0 23.7726C0 23.7726 4.91762 28.6254 10.038 28.0448C15.1584 27.4642 14.8035 19.994 20.8365 18.4648Z"
@@ -18,9 +18,9 @@
                 <div class="name">Фитнес-коуч</div>
             </a>
             <nav>
-                <a href="#">Программа</a>
-                <a href="#">Блог</a>
-                <a href="/profile">Профиль</a>
+                <a href="/training-program" title="Программы">Программы</a>
+                <a href="#" title="Блог">Блог</a>
+                <a href="/profile" title="Профиль">Профиль</a>
             </nav>
         </div>
     </header>

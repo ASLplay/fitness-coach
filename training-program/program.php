@@ -11,19 +11,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- SEO -->
-    <meta name="description" content="Фитнес-коучинг | Регистрация">
+    <meta name="description" content="Фитнес-коучинг | Программы">
     <meta http-equiv="Content-language" content="ru-RU">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Фитнес-коучинг. Cистема мониторинга здоровья и физических показателей">
-    <meta property="og:description" content="Фитнес-коучинг | Регистрация">
+    <meta property="og:description" content="Фитнес-коучинг | Программы">
     <meta property="og:url" content="fitness-coach.ru">
     <meta property="og:site_name" content="Фитнес-коучинг. Cистема мониторинга здоровья и физических показателей">
     <title>Фитнес-коуч</title>
     <!-- Style -->
     <link rel="stylesheet" href="../assets/css/header/header.css">
     <link rel="stylesheet" href="../assets/css/footer/footer.css">
-    <link rel="stylesheet" href="../assets/css/profile/heroBlock.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -34,11 +33,6 @@
 
 <!-- Content -->
 <main>
-    <section class="heroBlock">
-        <div class="content">
-            <h1><span>Матусяк</span> Виолетта</h1>
-        </div>
-    </section>
 </main>
 
 <!-- Footer -->

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: http://finess-coach.ru/sitemap.xml
+Host: finess-coach.ru

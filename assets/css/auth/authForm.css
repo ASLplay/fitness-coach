@@ -1,0 +1,29 @@
+.authForm {
+  width: 100%;
+  max-width: 454px;
+  margin: auto;
+}
+.authForm .content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.authForm .content h1 {
+  width: 100%;
+  color: var(--orange);
+  display: flex;
+}
+.authForm .content h1 span {
+  margin: auto;
+}
+.authForm .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.authForm .content form a {
+  color: var(--orange);
+}/*# sourceMappingURL=authForm.css.map */

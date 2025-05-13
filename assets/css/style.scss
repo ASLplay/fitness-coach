@@ -46,8 +46,24 @@ input {
     padding: 10px 15px;
     border-radius: 10px;
     transition: var(--transition);
-
-    &:hover, &:active {
+    width: 100%;
+    outline: none;
+    &:hover, &:focus {
+        border: 1px solid var(--orange);
+        transition: var(--transition);
+    }
+}
+select {
+    background-color: var(--totalWhite);
+    border: 1px solid var(--black);
+    color: var(--black);
+    font: var(--text);
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: var(--transition);
+    width: 100%;
+    outline: none;
+    &:hover, &:focus {
         border: 1px solid var(--orange);
         transition: var(--transition);
     }
@@ -87,7 +103,12 @@ h1, h2 {
     }
 }
 
-.bottonLink {
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.buttonLink {
     color: var(--totalWhite);
     padding: 10px 15px;
     border-radius: 10px;

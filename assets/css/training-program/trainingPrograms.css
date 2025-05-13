@@ -1,0 +1,25 @@
+.trainingPrograms .content .gridProgram {
+  display: grid;
+  grid-template: repeat(1, 200px)/repeat(1, 926.67px);
+  grid-auto-rows: 200px;
+  gap: 20px;
+}
+.trainingPrograms .content .gridProgram .cardProgram {
+  background-color: var(--whiteGrey);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.trainingPrograms .content .gridProgram .cardProgram .name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.trainingPrograms .content .gridProgram .cardProgram .name .title {
+  font: var(--title);
+}
+.trainingPrograms .content .gridProgram .cardProgram img {
+  align-self: flex-end;
+}/*# sourceMappingURL=trainingPrograms.css.map */

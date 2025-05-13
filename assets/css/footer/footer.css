@@ -15,6 +15,8 @@ footer .content .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 footer .content .logo .img {
   width: 40px;
@@ -25,7 +27,6 @@ footer .content .logo .img {
      object-position: center;
 }
 footer .content .logo .name {
-  color: var(--orange);
   font: var(--textBold);
 }
 footer .content nav {
@@ -46,4 +47,29 @@ footer .content nav .navBlock .links {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+footer .content nav .navBlock:last-child .title {
+  font: var(--textBold);
+}
+footer .content nav .navBlock:last-child .links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+footer .content nav .navBlock:last-child .links a {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: var(--totalWhite);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .content nav .navBlock:last-child .links a svg {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=footer.css.map */

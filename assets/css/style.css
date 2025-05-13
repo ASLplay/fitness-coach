@@ -43,8 +43,26 @@ input {
   padding: 10px 15px;
   border-radius: 10px;
   transition: var(--transition);
+  width: 100%;
+  outline: none;
 }
-input:hover, input:active {
+input:hover, input:focus {
+  border: 1px solid var(--orange);
+  transition: var(--transition);
+}
+
+select {
+  background-color: var(--totalWhite);
+  border: 1px solid var(--black);
+  color: var(--black);
+  font: var(--text);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: var(--transition);
+  width: 100%;
+  outline: none;
+}
+select:hover, select:focus {
   border: 1px solid var(--orange);
   transition: var(--transition);
 }
@@ -83,7 +101,12 @@ h1 span, h2 span {
   color: var(--orange);
 }
 
-.bottonLink {
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.buttonLink {
   color: var(--totalWhite);
   padding: 10px 15px;
   border-radius: 10px;
