@@ -20,15 +20,15 @@
                 <p class="title">Клиентам</p>
                 <div class="links">
                     <a href="/training-program" title="Программы">Программы</a>
-                    <a href="#" title="Блог">Блог</a>
+                    <a href="/page404.php" title="Блог">Блог</a>
                     <a href="/profile" title="Профиль">Профиль</a>
                 </div>
             </div>
             <div class="navBlock">
                 <p class="title">Компания</p>
                 <div class="links">
-                    <a href="#" title="О компании">О компании</a>
-                    <a href="#" title="Партнёрская программа">Партнёрская программа</a>
+                    <a href="/page404.php" title="О компании">О компании</a>
+                    <a href="/page404.php" title="Партнёрская программа">Партнёрская программа</a>
                 </div>
             </div>
             <div class="navBlock">

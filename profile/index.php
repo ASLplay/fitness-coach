@@ -1,3 +1,13 @@
+<?php
+// Защита от незарегистрированного пользователя
+session_start();
+// Проаеряем сессию
+if (!isset($_SESSION['login'])){
+    // Переадрисовываем его
+    header("Location:../auth/");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -26,7 +36,6 @@
     <link rel="stylesheet" href="../assets/css/profile/heroBlock.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <!-- Header -->
 <?php
         include "../inc/header.php";

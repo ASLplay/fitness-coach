@@ -51,7 +51,7 @@
                     <p class="title">Идеальное тело за месяц</p>
                     <p>Анализируем новые методики похудения</p>
                 </div>
-                <a class="buttonLink" href="#" title="Подробнее">Подробнее</a>
+                <a class="buttonLink" href="/page404.php" title="Подробнее">Подробнее</a>
             </div>
         </div>
     </section>

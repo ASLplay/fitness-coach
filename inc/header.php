@@ -19,7 +19,7 @@
             </a>
             <nav>
                 <a href="/training-program" title="Программы">Программы</a>
-                <a href="#" title="Блог">Блог</a>
+                <a href="/page404.php" title="Блог">Блог</a>
                 <a href="/profile" title="Профиль">Профиль</a>
             </nav>
         </div>

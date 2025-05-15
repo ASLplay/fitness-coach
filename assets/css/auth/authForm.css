@@ -9,6 +9,11 @@
   flex-direction: column;
   gap: 40px;
 }
+.authForm .content .message {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
 .authForm .content h1 {
   width: 100%;
   color: var(--orange);

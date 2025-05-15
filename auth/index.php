@@ -37,9 +37,15 @@
     <section class="authForm">
         <div class="content">
             <h1><span>Авторизация</span></h1>
-            <form action="" method="post">
-                <input required placeholder="Логин" title="Логин" type="text" name="login">
-                <input required placeholder="Пароль" title="Пароль" type="password" name="password">
+
+            <form action="../admin/controllers/login.php" method="post">
+                <?php
+            if(isset($_GET['message'])) {
+                echo "<p class='message'>{$_GET['message']}</p>";
+            }
+            ?>
+                <input required placeholder="Логин" title="Логин" type="text" name="login" pattern="[a-zA-Z0-9а-ЯА-Я]{100}" maxlength="100">
+                <input required placeholder="Пароль" title="Пароль" type="password" name="password" pattern="[a-zA-Z0-9]{100}" maxlength="100">
                 <button class="buttonLink" title="Продолжить" type="submit">Продолжить</button>
                 <a href="/register" title="У меня нет аккаунта">У меня нет аккаунта</a>
             </form>
