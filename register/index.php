@@ -38,10 +38,10 @@
         <div class="content">
             <h1><span>Регистрация</span></h1>
             <form action="../admin/controllers/register.php" method="post">
-                <input required placeholder="Имя" title="Имя" type="text" name="name" pattern="[a-zA-Zа-ЯА-Я]{100}" maxlength="100">
-                <input required placeholder="Фамилия" title="Фамилия" type="text" name="surname" pattern="[a-zA-Zа-ЯА-Я]{100}" maxlength="100">
-                <input required placeholder="Логин" title="Логин" type="text" name="login" pattern="[a-zA-Zа-ЯА-Я0-9]{100}" maxlength="100">
-                <input required placeholder="Пароль" title="Пароль" type="password" name="password" pattern="[a-zA-Z0-9]{100}" maxlength="100">
+                <input required placeholder="Имя" title="Имя" type="text" name="name" pattern="[a-zA-Zа-ЯА-Я]" maxlength="100">
+                <input required placeholder="Фамилия" title="Фамилия" type="text" name="surname" pattern="[a-zA-Zа-ЯА-Я]" maxlength="100">
+                <input required placeholder="Логин" title="Логин" type="text" name="login" pattern="[a-zA-Zа-ЯА-Я0-9]" maxlength="100">
+                <input required placeholder="Пароль" title="Пароль" type="password" name="password" maxlength="100">
                 <select required placeholder="Выберите вашу роль" title="Выберите вашу роль" name="role">
                     <option selected disabled>Выберите вашу роль</option>
                     <option value="coach">Тренер</option>

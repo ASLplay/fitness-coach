@@ -31,14 +31,20 @@ footer .content .logo .name {
 }
 footer .content nav {
   align-self: flex-end;
-  display: grid;
-  grid-template: repeat(1, auto)/repeat(3, 217px);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+}
+@media (max-width: 730px) {
+  footer .content nav {
+    gap: 30px;
+  }
 }
 footer .content nav .navBlock {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 217px;
 }
 footer .content nav .navBlock .title {
   font: var(--textBold);

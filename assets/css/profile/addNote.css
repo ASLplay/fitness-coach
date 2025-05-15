@@ -1,0 +1,40 @@
+.addNote .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.addNote .content form {
+  display: grid;
+  grid-template: repeat(1, auto)/1fr 453.33px;
+  gap: 20px;
+}
+.addNote .content form .infoNote {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addNote .content form .infoNote input {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.addNote .content form .infoNote textarea {
+  min-height: 150px;
+}
+.addNote .content form .link {
+  height: 200px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  background-color: var(--orange);
+}
+.addNote .content form .link .title {
+  color: var(--totalWhite);
+  font: var(--title);
+}
+.addNote .content form .link img {
+  filter: brightness(100);
+  align-self: flex-end;
+}/*# sourceMappingURL=addNote.css.map */

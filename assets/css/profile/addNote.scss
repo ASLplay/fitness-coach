@@ -1,0 +1,44 @@
+.addNote {
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        form {
+            display: grid;
+            grid-template: repeat(1, auto) / 1fr 453.33px;
+            gap: 20px;
+            .infoNote {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                input {
+                    width: fit-content;
+                }
+                textarea {
+                    min-height: 150px;
+                }
+            }
+
+            .link {
+                height: 200px;
+                border-radius: 20px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: left;
+                background-color: var(--orange);
+                .title {
+                    color: var(--totalWhite);
+                    font: var(--title);
+                }
+
+                img {
+                    filter: brightness(100);
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}

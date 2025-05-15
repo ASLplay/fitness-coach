@@ -38,7 +38,7 @@ a {
     color: var(--black);
 }
 
-input {
+input, textarea {
     background-color: var(--totalWhite);
     border: 1px solid var(--black);
     color: var(--black);
@@ -48,6 +48,7 @@ input {
     transition: var(--transition);
     width: 100%;
     outline: none;
+    resize: vertical;
     &:hover, &:focus {
         border: 1px solid var(--orange);
         transition: var(--transition);

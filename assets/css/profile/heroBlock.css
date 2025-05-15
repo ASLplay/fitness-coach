@@ -1,1 +1,17 @@
-/*# sourceMappingURL=heroBlock.css.map */
+.heroBlock .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.heroBlock .content .profile {
+  display: grid;
+  grid-template: repeat(1, 420px)/453px 1fr;
+  gap: 20px;
+}
+.heroBlock .content .profile .imgProfile {
+  border-radius: 20px;
+  background-color: var(--black);
+}
+.heroBlock .content .profile .lastNote {
+  height: 100%;
+}/*# sourceMappingURL=heroBlock.css.map */

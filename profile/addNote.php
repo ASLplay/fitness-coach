@@ -1,3 +1,14 @@
+<?php
+// Защита от незарегистрированного пользователя
+session_start();
+// Проаеряем сессию
+if (!isset($_SESSION['login'])){
+    // Переадрисовываем его
+    header("Location:../auth/");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -11,22 +22,21 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- SEO -->
-    <meta name="description" content="Фитнес-коучинг | Авторизация">
+    <meta name="description" content="Фитнес-коучинг | Дневник">
     <meta http-equiv="Content-language" content="ru-RU">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Фитнес-коучинг. Cистема мониторинга здоровья и физических показателей">
-    <meta property="og:description" content="Фитнес-коучинг | Авторизация">
+    <meta property="og:description" content="Фитнес-коучинг | Дневник">
     <meta property="og:url" content="fitness-coach.ru">
     <meta property="og:site_name" content="Фитнес-коучинг. Cистема мониторинга здоровья и физических показателей">
     <title>Фитнес-коуч</title>
     <!-- Style -->
     <link rel="stylesheet" href="../assets/css/header/header.css">
     <link rel="stylesheet" href="../assets/css/footer/footer.css">
-    <link rel="stylesheet" href="../assets/css/auth/authForm.css">
+    <link rel="stylesheet" href="../assets/css/profile/addNote.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <!-- Header -->
 <?php
         include "../inc/header.php";
@@ -34,20 +44,18 @@
 
 <!-- Content -->
 <main>
-    <section class="authForm">
+    <section class="addNote">
         <div class="content">
-            <h1><span>Авторизация</span></h1>
-
-            <form action="../admin/controllers/login.php" method="post">
-                <?php
-            if(isset($_GET['message'])) {
-                echo "<p class='message'>{$_GET['message']}</p>";
-            }
-            ?>
-                <input required placeholder="Логин" title="Логин" type="text" name="login" pattern="[a-zA-Z0-9а-ЯА-Я]" maxlength="100">
-                <input required placeholder="Пароль" title="Пароль" type="password" name="password" maxlength="100">
-                <button class="buttonLink" title="Продолжить" type="submit">Продолжить</button>
-                <a href="/register" title="У меня нет аккаунта">У меня нет аккаунта</a>
+            <h2><span>Запись</span> в дневник</h2>
+            <form action="../admin/controllers/addNote.php" method="post">
+                <div class="infoNote">
+                    <input required title="Дата" type="date" name="date">
+                    <textarea required placeholder="Запись в дневник" title="Логин" name="note"></textarea>
+                </div>
+                <button class="link" title="Создать запись" type="submit">
+                    <div class="title">Создать запись</div>
+                    <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
+                </button>
             </form>
         </div>
     </section>

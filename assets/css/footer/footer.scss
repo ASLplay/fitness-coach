@@ -31,15 +31,19 @@ footer {
 
         nav {
             align-self: flex-end;
-            display: grid;
-            grid-template: repeat(1, auto) / repeat(3, 217px);
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
+
+            @media (max-width:730px) {
+                gap: 30px;
+            }
 
             .navBlock {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-
+                width: 217px;
                 .title {
                     font: var(--textBold);
                 }

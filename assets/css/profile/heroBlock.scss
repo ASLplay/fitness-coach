@@ -1,0 +1,19 @@
+.heroBlock {
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .profile {
+            display: grid;
+            grid-template: repeat(1, 420px) / 453px 1fr;
+            gap: 20px;
+            .imgProfile {
+                border-radius: 20px;
+                background-color: var(--black);
+            }
+            .lastNote {
+                height: 100%;
+            }
+        }
+    }
+}

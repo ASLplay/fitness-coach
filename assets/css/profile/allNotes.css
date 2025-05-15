@@ -1,0 +1,29 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--whiteGrey);
+}
+.note .noteDate {
+  color: var(--orange);
+  font: var(--title);
+}
+.note .noteText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.allNotes .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.allNotes .content .gridNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}/*# sourceMappingURL=allNotes.css.map */
