@@ -46,15 +46,15 @@
         <div class="content">
             <div class="gridLinks">
                 <a href="/" class="link" title="Главная">
-                    <div class="title">Главная</div>
+                    <p class="title">Главная</p>
                     <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
                 </a>
                 <a href="/training-program" class="link" title="Программы">
-                    <div class="title">Программы</div>
+                    <p class="title">Программы</p>
                     <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
                 </a>
                 <a href="/profile" class="link" title="Профиль">
-                    <div class="title">Профиль</div>
+                    <p class="title">Профиль</p>
                     <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
                 </a>
             </div>

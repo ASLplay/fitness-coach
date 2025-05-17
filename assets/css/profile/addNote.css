@@ -1,7 +1,6 @@
 .addNote .content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 .addNote .content form {
   display: grid;
@@ -22,7 +21,7 @@
 }
 .addNote .content form .link {
   height: 200px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-block);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -37,4 +36,18 @@
 .addNote .content form .link img {
   filter: brightness(100);
   align-self: flex-end;
+}
+
+@media (max-width: 1000px) {
+  .addNote .content form {
+    grid-template: repeat(1, auto)/repeat(2, 1fr);
+  }
+}
+@media (max-width: 750px) {
+  .addNote .content form {
+    grid-template: repeat(2, auto)/repeat(1, 1fr);
+  }
+  .addNote .content form .link {
+    height: 150px;
+  }
 }/*# sourceMappingURL=addNote.css.map */

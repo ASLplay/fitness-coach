@@ -1,5 +1,6 @@
 header {
   width: 100%;
+  position: relative;
 }
 header .content {
   width: 100%;
@@ -9,6 +10,11 @@ header .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 750px) {
+  header .content {
+    padding: 15px 15px;
+  }
 }
 header .content .logo {
   display: flex;
@@ -31,10 +37,42 @@ header .content nav {
   align-items: center;
   gap: 20px;
 }
-header .content nav a:last-child {
-  display: flex;
-  border-radius: 10px;
-  padding: 10px 15px;
-  background-color: var(--orange);
-  color: var(--totalWhite);
+@media (max-width: 750px) {
+  header .content nav {
+    display: none;
+  }
+}
+header .navMobile {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 15px;
+  position: absolute;
+  background-color: var(--totalWhite);
+  width: 100%;
+  border-bottom: 2px solid var(--whiteGrey);
+}
+header .navMobile a {
+  align-self: flex-end;
+  font: var(--textBold);
+}
+header .navMobile a:last-child {
+  color: var(--orange);
+}
+
+.active {
+  display: flex !important;
+}
+
+.navButton {
+  display: none;
+  cursor: pointer;
+}
+.navButton svg path {
+  fill: var(--orange);
+}
+@media (max-width: 750px) {
+  .navButton {
+    display: flex;
+  }
 }/*# sourceMappingURL=header.css.map */

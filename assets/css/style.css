@@ -18,8 +18,8 @@
 }
 
 :root {
-  --h1:clamp(22px, 3vw, 55px) "Montserrat-Bold";
-  --title:clamp(18px, 1vw, 20px) "Montserrat-Bold";
+  --h1: clamp(22px, 3vw, 55px) "Montserrat-Bold";
+  --title: clamp(18px, 3vw, 20px) "Montserrat-Bold";
   --text: 16px "Montserrat-Regular";
   --textBold: 16px "Montserrat-Bold";
   --hint: 12px "Montserrat-Regular";
@@ -29,25 +29,30 @@
   --orange: #FF7200;
   --grey: #8E8E8E;
   --transition: .25;
+  --border-radius-element: clamp(5px, 2vw, 10px);
+  --border-radius-block: clamp(10px, 2vw, 20px);
 }
 
 a {
   color: var(--black);
 }
 
-input, textarea {
+input,
+textarea {
   background-color: var(--totalWhite);
   border: 1px solid var(--black);
   color: var(--black);
   font: var(--text);
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-element);
   transition: var(--transition);
   width: 100%;
   outline: none;
   resize: vertical;
 }
-input:hover, input:focus, textarea:hover, textarea:focus {
+input:hover, input:focus,
+textarea:hover,
+textarea:focus {
   border: 1px solid var(--orange);
   transition: var(--transition);
 }
@@ -58,7 +63,7 @@ select {
   color: var(--black);
   font: var(--text);
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-element);
   transition: var(--transition);
   width: 100%;
   outline: none;
@@ -89,15 +94,18 @@ section {
 section .content {
   padding: 30px 20px;
   max-width: 1440px;
+  gap: 40px;
   margin: auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   font: var(--h1);
   width: 100%;
   max-width: 1163px;
 }
-h1 span, h2 span {
+h1 span,
+h2 span {
   font: var(--h1);
   color: var(--orange);
 }
@@ -110,8 +118,19 @@ button {
 .buttonLink {
   color: var(--totalWhite);
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-element);
   background-color: var(--orange);
   width: -moz-fit-content;
   width: fit-content;
+}
+
+@media (max-width: 750px) {
+  main,
+  body {
+    gap: 40px;
+  }
+  section .content {
+    padding: 20px 15px;
+    gap: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

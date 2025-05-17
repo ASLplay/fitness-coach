@@ -2,13 +2,12 @@
     .content {
         .gridProgram {
             display: grid;
-            grid-template: repeat(1, 200px) / repeat(1, 926.67px);
+            grid-template: repeat(1, 200px) / minmax(600px, 926.67px);
             grid-auto-rows: 200px;
             gap: 20px;
-
             .cardProgram {
                 background-color: var(--whiteGrey);
-                border-radius: 20px;
+                border-radius: var(--border-radius-block);
                 padding: 20px;
                 display: flex;
                 flex-direction: column;
@@ -29,5 +28,13 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width:750px) {
+
+    .trainingPrograms .content .gridProgram {
+        grid-auto-rows: 150px;
+        grid-template:  150px / 1fr;
     }
 }

@@ -57,6 +57,9 @@
         </nav>
     </div>
 </footer>
+<script>
+    document.querySelector(".navButton").addEventListener("click", () => {
+    document.querySelector(".navMobile").classList.toggle("active");});
+</script>
 </body>
-
 </html>

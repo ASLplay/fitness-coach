@@ -11,7 +11,7 @@
 .navLinks .content .gridLinks .link {
   cursor: pointer;
   background-color: var(--whiteGrey);
-  border-radius: 20px;
+  border-radius: var(--border-radius-block);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -33,4 +33,15 @@
 .navLinks .content .gridLinks .link:last-child img {
   filter: brightness(100);
   align-self: flex-end;
+}
+
+@media (max-width: 750px) {
+  .navLinks .content .gridLinks {
+    grid-template: repeat(2, 150px)/repeat(2, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .navLinks .content .gridLinks {
+    grid-template: repeat(3, 150px)/1fr;
+  }
 }/*# sourceMappingURL=navLinks.css.map */

@@ -1,5 +1,6 @@
 header {
     width: 100%;
+    position: relative;
 
     .content {
         width: 100%;
@@ -9,6 +10,10 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width:750px) {
+            padding: 15px 15px;
+        }
 
         .logo {
             display: flex;
@@ -32,17 +37,47 @@ header {
             align-items: center;
             gap: 20px;
 
-            a:last-child {
-                display: flex;
-                border-radius: 10px;
-                padding: 10px 15px;
-                background-color: var(--orange);
-                color: var(--totalWhite);
+            @media (max-width:750px) {
+                display: none;
             }
         }
+    }
 
-        .navButton {
-            nav {}
+    .navMobile {
+        display: none;
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px 15px;
+        position: absolute;
+        background-color: var(--totalWhite);
+        width: 100%;
+        border-bottom: 2px solid var(--whiteGrey);
+    
+        a {
+            align-self: flex-end;
+            font: var(--textBold);
+    
+            &:last-child {
+                color: var(--orange);
+            }
         }
+    }
+}
+
+
+.active {
+    display: flex !important;
+}
+
+.navButton {
+    display: none;
+    cursor: pointer;
+
+    svg path {
+        fill: var(--orange);
+    }
+
+    @media (max-width:750px) {
+        display: flex;
     }
 }

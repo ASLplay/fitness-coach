@@ -2,19 +2,22 @@
     .content {
         display: flex;
         flex-direction: column;
-        gap: 40px;
 
         form {
             display: grid;
             grid-template: repeat(1, auto) / 1fr 453.33px;
             gap: 20px;
+
+
             .infoNote {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+
                 input {
                     width: fit-content;
                 }
+
                 textarea {
                     min-height: 150px;
                 }
@@ -22,13 +25,14 @@
 
             .link {
                 height: 200px;
-                border-radius: 20px;
+                border-radius: var(--border-radius-block);
                 padding: 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 text-align: left;
                 background-color: var(--orange);
+
                 .title {
                     color: var(--totalWhite);
                     font: var(--title);
@@ -39,6 +43,22 @@
                     align-self: flex-end;
                 }
             }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .addNote .content form {
+        grid-template: repeat(1, auto) / repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width:750px) {
+        .addNote .content form {
+        grid-template: repeat(2, auto) / repeat(1, 1fr);
+        .link {
+            height: 150px;
         }
     }
 }

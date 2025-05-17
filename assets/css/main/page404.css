@@ -1,7 +1,6 @@
 .otherLinks .content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 .otherLinks .content .gridLinks {
   display: grid;
@@ -11,7 +10,7 @@
 .otherLinks .content .gridLinks .link {
   cursor: pointer;
   background-color: var(--whiteGrey);
-  border-radius: 20px;
+  border-radius: var(--border-radius-block);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -33,4 +32,15 @@
 .otherLinks .content .gridLinks .link:last-child img {
   filter: brightness(100);
   align-self: flex-end;
+}
+
+@media (max-width: 750px) {
+  .otherLinks .content .gridLinks {
+    grid-template: repeat(2, 150px)/repeat(2, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .otherLinks .content .gridLinks {
+    grid-template: repeat(3, 150px)/1fr;
+  }
 }/*# sourceMappingURL=page404.css.map */

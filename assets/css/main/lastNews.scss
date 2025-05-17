@@ -2,13 +2,12 @@
     .content {
         display: flex;
         flex-direction: column;
-        gap: 40px;
     }
     .newsBlock {
         height: 420px;
         background-color: var(--black);
         padding: 40px;
-        border-radius: 20px;
+        border-radius: var(--border-radius-block);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -29,4 +28,16 @@
             align-self: flex-end;
         }
     }
+}
+
+@media (max-width: 750px) {
+    .lastNews .content{
+        gap: 30px;
+
+        .newsBlock {
+            height: 320px;
+            padding: 20px;
+        }
+    }
+    
 }

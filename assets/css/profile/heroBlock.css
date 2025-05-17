@@ -1,7 +1,6 @@
 .heroBlock .content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 .heroBlock .content .profile {
   display: grid;
@@ -9,9 +8,24 @@
   gap: 20px;
 }
 .heroBlock .content .profile .imgProfile {
-  border-radius: 20px;
+  min-height: 320px;
+  border-radius: var(--border-radius-block);
   background-color: var(--black);
 }
 .heroBlock .content .profile .lastNote {
   height: 100%;
+}
+
+@media (max-width: 1000px) {
+  .heroBlock .content .profile {
+    grid-template: repeat(1, 320px)/repeat(2, 1fr);
+  }
+}
+@media (max-width: 750px) {
+  .heroBlock .content .profile {
+    grid-template: auto/1fr;
+  }
+  .heroBlock .content .profile .lastNote {
+    display: none;
+  }
 }/*# sourceMappingURL=heroBlock.css.map */

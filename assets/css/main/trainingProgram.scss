@@ -2,7 +2,6 @@
     .content {
         display: flex;
         flex-direction: column;
-        gap: 40px;
         .gridProgram {
             display: grid;
             grid-template: repeat(2, 200px) / repeat(3, 1fr) ;
@@ -10,7 +9,7 @@
             .link {
                 cursor: pointer;
                 background-color: var(--whiteGrey);
-                border-radius: 20px;
+                border-radius: var(--border-radius-block);
                 padding: 20px;
                 display: flex;
                 flex-direction: column;
@@ -37,5 +36,19 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width:750px) {
+
+    .trainingProgram .content .gridProgram {
+        grid-template: repeat(3, 150px) / repeat(2, 1fr) ;
+    }
+}
+
+@media (max-width:450px) {
+
+    .trainingProgram .content .gridProgram {
+        grid-template: repeat(6, 150px) / 1fr ;
     }
 }

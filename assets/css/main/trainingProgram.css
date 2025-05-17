@@ -1,7 +1,6 @@
 .trainingProgram .content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 .trainingProgram .content .gridProgram {
   display: grid;
@@ -11,7 +10,7 @@
 .trainingProgram .content .gridProgram .link {
   cursor: pointer;
   background-color: var(--whiteGrey);
-  border-radius: 20px;
+  border-radius: var(--border-radius-block);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -33,4 +32,15 @@
 .trainingProgram .content .gridProgram .link:last-child img {
   filter: brightness(100);
   align-self: flex-end;
+}
+
+@media (max-width: 750px) {
+  .trainingProgram .content .gridProgram {
+    grid-template: repeat(3, 150px)/repeat(2, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .trainingProgram .content .gridProgram {
+    grid-template: repeat(6, 150px)/1fr;
+  }
 }/*# sourceMappingURL=trainingProgram.css.map */
