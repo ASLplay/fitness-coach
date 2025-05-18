@@ -1,5 +1,5 @@
 <?php
-// Защита от незарегистрированного пользователя
+// Защита от незарегистрированного пользователя 
 session_start();
 // Проаеряем сессию
 if (!isset($_SESSION['login'])){
@@ -25,8 +25,6 @@ if ($row = mysqli_fetch_assoc($result)) {
     $_SESSION['role'] = $row['role'];
     $_SESSION['id_user'] = $row['id_user'];
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +71,7 @@ if ($row = mysqli_fetch_assoc($result)) {
                 <div class="imgProfile"></div>
                 <div class="lastNote">
                     <?php 
-                        $sql = mysqli_prepare($connect, "SELECT * FROM `notes` WHERE `id_user` = ? ORDER BY `id_note` DESC LIMIT 1"); // Отправляемый запрос
+                        $sql = mysqli_prepare($connect, "SELECT * FROM `notes` WHERE `id_user` = ? ORDER BY `date` DESC LIMIT 1"); // Отправляемый запрос
                         mysqli_stmt_bind_param($sql, "s", $_SESSION['id_user']); // Отправляемые данные
                         mysqli_stmt_execute($sql); // Отправляем запрос
                         $result = mysqli_stmt_get_result($sql); // Получаем результат
@@ -109,6 +107,7 @@ if ($row = mysqli_fetch_assoc($result)) {
                     <div class="title">Редактривать профиль</div>
                     <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
                 </a>
+
                 <a href="/admin/controllers/logout.php" class="link" title="Выйти из аккаунта">
                     <div class="title">Выйти из аккаунта</div>
                     <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
