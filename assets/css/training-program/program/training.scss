@@ -1,0 +1,17 @@
+.training {
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            height: 420px;
+            border-radius: var(--border-radius-block);
+        }
+        .text {
+            width: 100%;
+        }
+    }
+}

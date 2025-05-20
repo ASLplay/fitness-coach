@@ -1,0 +1,16 @@
+.video .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.video .content iframe {
+  width: 100%;
+  max-width: 926px;
+  height: 520px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin: auto;
+  border-radius: var(--border-radius-block);
+}/*# sourceMappingURL=video.css.map */

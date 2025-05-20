@@ -60,26 +60,20 @@
         <div class="content">
             <h2><span>Программы</span> тренировок</h2>
             <div class="gridProgram">
-                <a href="#" class="link" title="Силовая тренеровки">
-                    <div class="title">Силовая тренеровки</div>
-                    <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
-                </a>
-                <a href="#" class="link" title="Кардио тренеровки">
-                    <div class="title">Кардио тренеровки</div>
-                    <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
-                </a>
-                <a href="#" class="link" title="Воркаут тренеровки">
-                    <div class="title">Воркаут тренеровки</div>
-                    <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
-                </a>
-                <a href="#" class="link" title="Кросс">
-                    <div class="title">Кросс</div>
-                    <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
-                </a>
-                <a href="#" class="link" title="Занятия на дому">
-                    <div class="title">Занятия на дому</div>
-                    <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
-                </a>
+                <?php 
+                include "./function/connect.php";
+                $sql = mysqli_prepare($connect, "SELECT * FROM `training-program` LIMIT 5");
+                mysqli_stmt_execute($sql);
+                $result = mysqli_stmt_get_result($sql);
+                while($row = mysqli_fetch_assoc($result))
+                {
+                    echo "
+                    <a href='./training-program/program.php?program=".$row['id_tprogram']."' class='link' title='".$row['title']."'>
+                        <div class='title'>".$row['title']."</div>
+                        <img src='./assets/img/icons/arrow.svg' alt='Ссылка' title='Ссылка'>
+                    </a>";
+                }
+                ?>
                 <a href="/training-program" class="link" title="Полный список программ">
                     <div class="title">Полный список программ</div>
                     <img src="./assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">

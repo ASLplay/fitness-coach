@@ -44,27 +44,24 @@
     <section class="trainingPrograms">
         <div class="content">
             <div class="gridProgram">
-                <a href="#" title="Силовая тренеровки" class="cardProgram">
-                    <div class="name">
-                        <p class="title">Силовая тренеровки</p>
-                        <p>Программа расчитана на усиление силовых показателей</p>
-                    </div>
-                    <img title="Ссылка" src="../assets/img/icons/arrow.svg" alt="Ссылка">
-                </a>
-                <a href="#" title="Силовая тренеровки" class="cardProgram">
-                    <div class="name">
-                        <p class="title">Силовая тренеровки</p>
-                        <p>Программа расчитана на усиление силовых показателей</p>
-                    </div>
-                    <img title="Ссылка" src="../assets/img/icons/arrow.svg" alt="Ссылка">
-                </a>
-                <a href="#" title="Силовая тренеровки" class="cardProgram">
-                    <div class="name">
-                        <p class="title">Силовая тренеровки</p>
-                        <p>Программа расчитана на усиление силовых показателей</p>
-                    </div>
-                    <img title="Ссылка" src="../assets/img/icons/arrow.svg" alt="Ссылка">
-                </a>
+                <?php 
+                include "../function/connect.php";
+
+                $sql = mysqli_prepare($connect, "SELECT * FROM `training-program`");
+                mysqli_stmt_execute($sql);
+                $result = mysqli_stmt_get_result($sql);
+
+                    while ($row = mysqli_fetch_assoc($result)){
+                        echo "                
+                        <a href='./program.php?program=".$row['id_tprogram']."' title='".$row['title']."' class='cardProgram'>
+                            <div class='name'>
+                                <p class='title'>".$row['title']."</p>
+                                <p>".$row['hint']."</p>
+                            </div>
+                            <img title='Ссылка' src='../assets/img/icons/arrow.svg' alt='Ссылка'>
+                        </a>";
+                    }
+                ?>
                 </div>
         </div>
     </section>
