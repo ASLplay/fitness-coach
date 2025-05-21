@@ -1,7 +1,5 @@
 .trainingProgram {
     .content {
-        display: flex;
-        flex-direction: column;
         .gridProgram {
             display: grid;
             grid-template: repeat(2, 200px) / repeat(3, 1fr) ;

@@ -68,14 +68,23 @@ if ($row = mysqli_fetch_assoc($result)) {
         <div class="content">
             <?php echo "<h1><span>$surname</span> $name</h1>" ?>
             <div class="profile">
-                <div class="imgProfile"></div>
+                <div class="imgProfile">
+                    <?php 
+                        $sql = mysqli_prepare($connect, "SELECT * FROM `img-profile` WHERE `id_user` = ? ORDER BY `id_img` DESC LIMIT 1"); // Отправляемый запрос
+                        mysqli_stmt_bind_param($sql, "s", $_SESSION['id_user']); // Отправляемые данные
+                        mysqli_stmt_execute($sql); // Отправляем запрос
+                        $result = mysqli_stmt_get_result($sql); // Получаем результат
+                        if ($row = mysqli_fetch_assoc($result)) {
+                            echo "<img loading='lazy' src='../admin/uploads/imgProfile/".$row['url']."' alt='Фото профиля'>";
+                        }
+                    ?>
+                </div>
                 <div class="lastNote">
                     <?php 
                         $sql = mysqli_prepare($connect, "SELECT * FROM `notes` WHERE `id_user` = ? ORDER BY `date` DESC LIMIT 1"); // Отправляемый запрос
                         mysqli_stmt_bind_param($sql, "s", $_SESSION['id_user']); // Отправляемые данные
                         mysqli_stmt_execute($sql); // Отправляем запрос
                         $result = mysqli_stmt_get_result($sql); // Получаем результат
-
                         // Записываем данные
                         if ($row = mysqli_fetch_assoc($result)) {
                             // Переделываем дату
@@ -103,7 +112,7 @@ if ($row = mysqli_fetch_assoc($result)) {
                     <div class="title">Запись в дневник</div>
                     <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
                 </a>
-                <a href="/page404.php" class="link" title="Редактривать профиль">
+                <a href="/profile/editProfile.php" class="link" title="Редактривать профиль">
                     <div class="title">Редактривать профиль</div>
                     <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
                 </a>

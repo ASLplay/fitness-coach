@@ -1,8 +1,5 @@
 .navLinks {
     .content {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
         .gridLinks {
             display: grid;
             grid-template: repeat(1, 200px) / repeat(3, 1fr);

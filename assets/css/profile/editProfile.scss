@@ -1,0 +1,57 @@
+.editProfile {
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        form {
+            display: grid;
+            gap: 20px;
+            grid-template: repeat(1, 200px) / repeat(3, 1fr);
+            .previewImg {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 100%;
+
+                .fileInput {
+                    background: none;
+                }
+                .preview {
+                    border-radius: var(--border-radius-element);
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    z-index: -1;
+                }
+            }
+            .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .link {
+                height: 200px;
+                border-radius: var(--border-radius-block);
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: left;
+                background-color: var(--orange);
+
+                .title {
+                    color: var(--totalWhite);
+                    font: var(--title);
+                }
+
+                img {
+                    filter: brightness(100);
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}

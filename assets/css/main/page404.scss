@@ -1,7 +1,5 @@
 .otherLinks {
     .content {
-        display: flex;
-        flex-direction: column;
         .gridLinks {
             display: grid;
             grid-template: repeat(1, 200px) / repeat(3, 1fr);

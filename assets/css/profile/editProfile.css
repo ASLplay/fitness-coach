@@ -1,0 +1,52 @@
+.editProfile .content {
+  display: flex;
+  flex-direction: column;
+}
+.editProfile .content form {
+  display: grid;
+  gap: 20px;
+  grid-template: repeat(1, 200px)/repeat(3, 1fr);
+}
+.editProfile .content form .previewImg {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.editProfile .content form .previewImg .fileInput {
+  background: none;
+}
+.editProfile .content form .previewImg .preview {
+  border-radius: var(--border-radius-element);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+}
+.editProfile .content form .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.editProfile .content form .link {
+  height: 200px;
+  border-radius: var(--border-radius-block);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  background-color: var(--orange);
+}
+.editProfile .content form .link .title {
+  color: var(--totalWhite);
+  font: var(--title);
+}
+.editProfile .content form .link img {
+  filter: brightness(100);
+  align-self: flex-end;
+}/*# sourceMappingURL=editProfile.css.map */
