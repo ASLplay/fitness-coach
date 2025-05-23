@@ -108,15 +108,42 @@ if ($row = mysqli_fetch_assoc($result)) {
     <section class="navLinks">
         <div class="content">
             <div class="gridLinks">
-                <a href="/profile/addNote.php" class="link" title="Запись в дневник">
-                    <div class="title">Запись в дневник</div>
-                    <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
-                </a>
-                <a href="/profile/editProfile.php" class="link" title="Редактривать профиль">
-                    <div class="title">Редактривать профиль</div>
-                    <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
-                </a>
-
+                <?php 
+                if ($_SESSION['role'] == 'admin') {
+                    echo "
+                        <a href='/profile/admin/checkPost.php' class='link' title='Модерация постов'>
+                            <div class='title'>Модерация постов</div>
+                            <img src='../assets/img/icons/arrow.svg' alt='Ссылка' title='Ссылка'>
+                        </a>
+                        <a href='/profile/admin/addNews.php' class='link' title='Добавить новость'>
+                            <div class='title'>Добавить новость</div>
+                            <img src='../assets/img/icons/arrow.svg' alt='Ссылка' title='Ссылка'>
+                        </a>
+                        ";
+                } elseif ($_SESSION['role'] == 'coach') {
+                    echo "
+                        <a href='/profile/addPost.php' class='link' title='Добавить пост'>
+                            <div class='title'>Добавить пост</div>
+                            <img src='../assets/img/icons/arrow.svg' alt='Ссылка' title='Ссылка'>
+                        </a>
+                        <a href='/profile/editProfile.php' class='link' title='Редактривать профиль'>
+                            <div class='title'>Редактривать профиль</div>
+                            <img src='../assets/img/icons/arrow.svg' alt='Ссылка' title='Ссылка'>
+                        </a>
+                        ";
+                } else {
+                    echo "
+                        <a href='/profile/addNote.php' class='link' title='Запись в дневник'>
+                            <div class='title'>Запись в дневник</div>
+                            <img src='../assets/img/icons/arrow.svg' alt='Ссылка' title='Ссылка'>
+                        </a>
+                        <a href='/profile/editProfile.php' class='link' title='Редактривать профиль'>
+                            <div class='title'>Редактривать профиль</div>
+                            <img src='../assets/img/icons/arrow.svg' alt='Ссылка' title='Ссылка'>
+                        </a>
+                        ";
+                }
+                ?>
                 <a href="/admin/controllers/logout.php" class="link" title="Выйти из аккаунта">
                     <div class="title">Выйти из аккаунта</div>
                     <img src="../assets/img/icons/arrow.svg" alt="Ссылка" title="Ссылка">
@@ -130,7 +157,7 @@ if ($row = mysqli_fetch_assoc($result)) {
             <h2><span>Ваш</span> дневник</h2>
             <div class="gridNotes">
                 <?php 
-                        $sql = mysqli_prepare($connect, "SELECT * FROM `notes` WHERE `id_user` = ? ORDER BY `id_note` DESC"); // Отправляемый запрос
+                        $sql = mysqli_prepare($connect, "SELECT * FROM `notes` WHERE `id_user` = ? ORDER BY `date` DESC"); // Отправляемый запрос
                         mysqli_stmt_bind_param($sql, "s", $_SESSION['id_user']); // Отправляемые данные
                         mysqli_stmt_execute($sql); // Отправляем запрос
                         $result = mysqli_stmt_get_result($sql); // Получаем результат

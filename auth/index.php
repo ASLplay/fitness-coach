@@ -44,7 +44,7 @@
                 echo "<p class='message'>{$_GET['message']}</p>";
             }
             ?>
-                <input required placeholder="Логин" title="Логин" type="text" name="login" pattern="^[a-zA-Zа-яА-ЯёЁ]+$" maxlength="100">
+                <input required placeholder="Логин" title="Логин" type="text" name="login" pattern="^[a-zA-Zа-яА-ЯёЁ0-9]+$" maxlength="100">
                 <input required placeholder="Пароль" title="Пароль" type="password" name="password" maxlength="100">
                 <button class="buttonLink" title="Продолжить" type="submit">Продолжить</button>
                 <a href="/register" title="У меня нет аккаунта">У меня нет аккаунта</a>

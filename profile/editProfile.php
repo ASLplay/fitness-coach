@@ -58,10 +58,7 @@ $row = mysqli_fetch_assoc($result);
         <div class="content">
             <h2><span>Редактировать</span> профиль</h2>
             <form action="../admin/controllers/editProfile.php" method="post" enctype="multipart/form-data">
-                <div class="previewImg">
-                    <input accept="image/png, image/jpeg, image/gif, .png, .jpg, .jpeg, .gif" class="fileInput" title="Фото" type="file" name="photo">
-                    <img title="Изображение" class="preview">
-                </div>
+                <input accept="image/png, image/jpeg, image/gif, .png, .jpg, .jpeg, .gif" class="fileInput" title="Фото" type="file" name="photo">
                 <div class="info">
                     <input <?php echo "value='".$row['name']."'"; ?> required placeholder="Имя" title="Имя" type="text" name="name" pattern="^[a-zA-Zа-яА-ЯёЁ]+$" maxlength="100">
                     <input <?php echo "value='".$row['surname']."'"; ?> required placeholder="Фамилия" title="Фамилия" type="text" name="surname" pattern="^[a-zA-Zа-яА-ЯёЁ]+$" maxlength="100">

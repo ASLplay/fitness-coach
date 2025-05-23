@@ -50,7 +50,7 @@ if (!isset($_SESSION['login'])){
             <form action="../admin/controllers/addNote.php" method="post">
                 <div class="infoNote">
                     <input required title="Дата" type="date" name="date">
-                    <textarea required placeholder="Запись в дневник" title="Логин" name="note"></textarea>
+                    <textarea required placeholder="Запись в дневник" title="Текст" name="note"></textarea> 
                 </div>
                 <button class="link" title="Создать запись" type="submit">
                     <div class="title">Создать запись</div>
@@ -60,7 +60,6 @@ if (!isset($_SESSION['login'])){
         </div>
     </section>
 </main>
-
 <!-- Footer -->
 <?php
         include "../inc/footer.php"
